@@ -1,0 +1,16 @@
+.Keyboard{
+    height: 30vh;
+    width: 100vw;
+    /* background-color: blue; */
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+}
+.keyboard-row{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: 0.5%;
+}

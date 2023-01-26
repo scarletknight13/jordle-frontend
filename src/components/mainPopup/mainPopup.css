@@ -1,0 +1,13 @@
+.p-dialog-title {
+    font-size: 50px !important;
+}
+.play-again-btn{
+    width: 25vw;
+    height: 6.5vh;
+    background-color: gray;
+    border-radius: 20px;
+    border: none;
+}
+.play-again-btn:hover{
+    transform: scale(.94);
+}

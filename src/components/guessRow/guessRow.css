@@ -1,0 +1,19 @@
+.GuessRow{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: .5vw;
+    margin-bottom: 1vh;
+}
+/* medium devices */
+@media screen and (max-width: 1024px){
+    .GuessRow{
+        gap: 1.5vw;
+    }
+}
+@media screen and (max-width: 600px){
+    .GuessRow{
+        gap: 2vw;
+    }
+    
+}

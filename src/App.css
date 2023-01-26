@@ -1,0 +1,19 @@
+.App{
+  text-align: center;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  width: 100vw;
+  height: 100vh;
+}
+.gameboard{
+  text-align: center;
+  width: 100vw;
+  height: 90vh;
+  /* z-index: 2; */
+}
+
+.record-container{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
