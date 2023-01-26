@@ -1,12 +1,12 @@
 .Keyboard{
-    height: 30vh;
+    /* height: 30vh; */
     width: 100vw;
     /* background-color: blue; */
     margin-top: 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3%;
+    gap: 1vh;
 }
 .keyboard-row{
     display: flex;
