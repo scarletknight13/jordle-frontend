@@ -8,6 +8,7 @@
 .gameboard{
   text-align: center;
   width: 100vw;
+  padding-top: 1vh;
   height: 92vh;
   /* z-index: 2; */
 }

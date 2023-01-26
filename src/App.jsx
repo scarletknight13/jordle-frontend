@@ -39,7 +39,6 @@ function App() {
     <div className="App">
         <Header setModalVisible={setModalVisible} setTutorialVisible={setTutorialVisible}/>
         <div className="gameboard">
-          <h1>{currentGuess} - {guesses[0].word}</h1>
           {guesses.map((g, idx) => <GuessRow guess={guesses[idx].word} classes={guesses[idx].states}/>) }
           <Keyboard handleKeyPicked={handleKeyPicked}/>
           <ToastContainer data-testid='toast-container'/>
