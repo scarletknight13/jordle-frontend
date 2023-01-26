@@ -27,7 +27,7 @@
 @media screen and (max-width: 600px){
      .Key{
         width: fit-content;
-        min-width: 9vw;
+        min-width: 8vw;
         font-size: large;
      }
 }
