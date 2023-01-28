@@ -28,5 +28,6 @@
      .Key{
         width: -webkit-fit-content;
         font-size: small;
+        color: black;
      }
 }

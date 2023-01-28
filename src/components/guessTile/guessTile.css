@@ -37,5 +37,6 @@
 @media screen and (max-width: 600px){
     .GuessTile{
         width: 14vw;
+        height: 7.5vh;
     }
 }
