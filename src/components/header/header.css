@@ -8,11 +8,12 @@
 }
 .logo-container{
     width: 25%;
-    height: 100%;
+    height: 80%;
 }
 .logo{
-    width: 75%;
+    width: 30%;
     height: 100%;
+    border-radius: 300px
 }
 .title-container{
     width: 50%;
@@ -43,4 +44,9 @@
         height: 50%;
         width: 50%;
     }
+}
+@media screen and (max-width: 600px){
+   .logo{
+        width: 100%;
+   }
 }

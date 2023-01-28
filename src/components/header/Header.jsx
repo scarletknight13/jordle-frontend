@@ -2,11 +2,12 @@ import React from 'react'
 import { BiMenu } from 'react-icons/bi';
 import {FiInfo} from 'react-icons/fi'
 import './header.css'
+import logo  from '../../jordle-logo.png'
 const Header = ({setModalVisible, setTutorialVisible}) => {
   return (
     <header className='Header'>
         <div className='logo-container'>
-          <img className='logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj9x7hn1ltcgAU1iJB66Y2dQaGND9XXdVQBg&usqp=CAU" alt="logo" />
+          <img className='logo' src={logo} alt="logo" />
         </div>
         <div className='title-container'>
           <h2 className='title'>Jordle</h2>
