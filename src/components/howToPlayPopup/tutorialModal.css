@@ -1,6 +1,16 @@
+.example-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0;
+}
 .example-word{
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
     gap: .25rem;
 }
 .example-letter{
@@ -16,6 +26,7 @@
 .tutorial-paragraph{
     margin-block: 0;
     font-weight: bolder;
+    margin-top: .6rem;
 }
 
 @media screen and (max-width: 1024px){

@@ -11,3 +11,15 @@
 .play-again-btn:hover{
     transform: scale(.94);
 }
+
+@media screen and (max-width: 600px){
+    .MainPopup{
+        width: 85vw !important;
+    }
+    .play-again-btn{
+        width: 35vw;
+        height: 7vh;
+        color: black;
+        font-size: medium;
+    }
+}
