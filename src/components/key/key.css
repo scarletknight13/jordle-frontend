@@ -25,10 +25,11 @@
     }
 }
 @media screen and (max-width: 600px){
-     .Key{
+    .Key{
         width: -webkit-fit-content;
         height: 6vh;
         font-size: smaller;
         color: black;
-     }
+    }
+    
 }
