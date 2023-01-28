@@ -14,3 +14,10 @@
     justify-content: center;
     gap: 0.5%;
 }
+
+/* @media screen and (max-width: 600px){
+    .Keyboard{
+        gap: .5vh;
+    }
+} */
+

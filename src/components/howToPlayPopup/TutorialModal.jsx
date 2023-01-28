@@ -13,7 +13,7 @@ const TutorialModal = ({tutorialVisible, setTutorialVisible}) => {
     <Dialog className="TutorialModal" visible={tutorialVisible} onHide={() => setTutorialVisible(false)}
         header="How To Play"
         style={{width: '45vw', height: '85vh'}}
-        contentStyle={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}
+        contentStyle={{display: 'flex', textAlign: "center", flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center'}}
         >
         <p className="tutorial-paragraph">Guess the word in 6 tries</p>
         <ul style={{listStyle: 'none'}}>
