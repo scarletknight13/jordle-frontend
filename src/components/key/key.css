@@ -27,6 +27,7 @@
 @media screen and (max-width: 600px){
      .Key{
         width: -webkit-fit-content;
+        height: 6vh;
         font-size: small;
         color: black;
      }
