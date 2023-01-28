@@ -15,9 +15,9 @@
     gap: 0.5%;
 }
 
-/* @media screen and (max-width: 600px){
-    .Keyboard{
-        gap: .5vh;
+@media screen and (max-width: 600px){
+    .keyboard-row{
+        gap: 0.25%;
     }
-} */
+}
 
