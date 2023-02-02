@@ -35,7 +35,7 @@
 
 @media screen and (max-width: 600px){
   .gameboard{
-    height: 45svh; 
+    height: 55svh; 
   }
   .App{
     height: 100svh;
