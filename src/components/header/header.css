@@ -53,9 +53,12 @@
         width: 100%;
    }
    .Header{
-    height: 6vh;
+        height: 6vh;
    }
    .title{
-    font-size: larger;
+        font-size: larger;
+   }
+   .header-btn{
+        height: 100%;
    }
 }
