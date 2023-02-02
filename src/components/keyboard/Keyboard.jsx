@@ -10,7 +10,7 @@ const Keyboard = ({word, handleKeyPicked}) => {
     const mappedKeys = keys.map((key, idx) => <Key key={`key-${idx}`} handleKeyPicked={handleKeyPicked} word={word} letter={key}></Key>)
     const topKeys = mappedKeys.slice(0, 10);
     const middleKeys = mappedKeys.slice(10, 19);
-    const bottomKeys = [<Key key={`key-57`} handleKeyPicked={handleKeyPicked} word={word} letter={'Back'}></Key>, ...mappedKeys.slice(19, 26), <Key key={`key-58`} handleKeyPicked={handleKeyPicked} word={word} letter={'Enter'}></Key>];
+    const bottomKeys = [<Key addedClasses={['special-key']} key={`key-57`} handleKeyPicked={handleKeyPicked} word={word} letter={'Back'}></Key>, ...mappedKeys.slice(19, 26), <Key addedClasses={['special-key']} key={`key-58`} handleKeyPicked={handleKeyPicked} word={word} letter={'Enter'}></Key>];
     return (
         <div className="Keyboard">
             <div className="keyboard-top-row keyboard-row">{topKeys}</div>

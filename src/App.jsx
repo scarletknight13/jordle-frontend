@@ -40,9 +40,9 @@ function App() {
         <Header setModalVisible={setModalVisible} setTutorialVisible={setTutorialVisible}/>
         <div className="gameboard">
           {guesses.map((g, idx) => <GuessRow guess={guesses[idx].word} classes={guesses[idx].states}/>) }
-          <Keyboard handleKeyPicked={handleKeyPicked}/>
-          <ToastContainer data-testid='toast-container'/>
         </div>
+        <Keyboard handleKeyPicked={handleKeyPicked}/>
+        <ToastContainer data-testid='toast-container'/>
         <MainPopup record={record} modalVisible={modalVisible} setModalVisible={setModalVisible} resetComplete={resetComplete} gameState={gameState} updateGameState={updateGameState}/>
         <TutorialModal tutorialVisible={tutorialVisible} setTutorialVisible={setTutorialVisible} />
     </div>

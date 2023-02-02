@@ -4,13 +4,20 @@
   background-color: #1a1a1a;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
 }
 .gameboard{
   text-align: center;
   width: 100vw;
-  padding-top: 1vh;
-  height: 92vh;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   /* z-index: 2; */
 }
 
@@ -18,4 +25,17 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  .gameboard{
+      height: 45vh;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .gameboard{
+      height: 55vh;
+      
+  } 
 }

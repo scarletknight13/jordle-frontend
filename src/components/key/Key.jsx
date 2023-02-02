@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import './key.css'
-const Key = ({word, letter, handleKeyPicked}) => {
+const Key = ({word, letter, handleKeyPicked, addedClasses}) => {
   const handleClick = (e) =>{
     let keyVal = e.target.innerText;
     if(keyVal === 'Back'){
@@ -10,7 +10,7 @@ const Key = ({word, letter, handleKeyPicked}) => {
     handleKeyPicked({key: keyVal})
   }
   return (
-    <button className={`Key key-${letter.toUpperCase()}`} onClick={(e) => handleClick(e)}>{letter}</button>
+    <button className={`Key key-${letter.toUpperCase()} ${addedClasses ? addedClasses.join(' ') : ''}`} onClick={(e) => handleClick(e)}>{letter}</button>
   )
 }
 

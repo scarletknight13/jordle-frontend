@@ -1,36 +1,23 @@
 .Key{
-    width: 3.5vw;
-    height: 5vh;
+    width: 9.8%;
+    height: 100%;
     background-color: lightgray;
     border: rgba(0, 0, 0, 0.646) solid .5px;
     border-radius: 10px;
 }
-.correct{
-    background-color: rgba(3, 110, 3, 0.781);
-    color: white;
+.special-key{
+    width: 14.7%;
 }
-.wrong{
-    background-color: rgba(255, 0, 0, 0.714);
-    color: white;
-}
+
 .Key:hover{
     transform: scale(1.13);
 }
 
 /* medium devices */
 @media screen and (max-width: 1024px){
-    .Key{
-       width: 8vw;
-       font-size: large;
-    }
+
 }
 @media screen and (max-width: 600px){
-    .Key{
-        width: -webkit-fit-content;
-        height: 6vh;
-        font-size: 12.5px;
-        color: black;
-    }
     .Key:hover{
         transform: scale(1);
     }
