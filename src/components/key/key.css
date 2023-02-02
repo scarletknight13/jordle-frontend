@@ -4,6 +4,7 @@
     background-color: lightgray;
     border: rgba(0, 0, 0, 0.646) solid .5px;
     border-radius: 10px;
+    color: black;
 }
 .special-key{
     width: 14.7%;
