@@ -38,6 +38,7 @@
     height: 45vh; 
   }
   .App{
+    height: 100vh;
     justify-content: space-between;
   } 
 }
