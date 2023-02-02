@@ -22,6 +22,7 @@
 @media screen and (max-width: 1024px){
     .Keyboard{
        width: 60vw;
+       height: 25vh;
     }
     .keyboard-middle-row{
         padding: 0 4.9%;
@@ -32,6 +33,7 @@
 @media screen and (max-width: 600px){
     .Keyboard{
        width: 100vw;
+       height: 25vh;
     }
     .keyboard-middle-row{
         padding: 0 4.9%;
