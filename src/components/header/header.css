@@ -44,9 +44,18 @@
         height: 50%;
         width: 50%;
     }
+    .Header{
+        height: 7vh;
+    }
 }
 @media screen and (max-width: 600px){
    .logo{
         width: 100%;
+   }
+   .Header{
+    height: 6vh;
+   }
+   .title{
+    font-size: larger;
    }
 }
