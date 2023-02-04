@@ -7,7 +7,7 @@ import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 import { useEffect, useState } from "react";
 
-const MainPopup = ({gameState, resetComplete, record, updateGameState, modalVisible, setModalVisible}) => {
+const MainPopup = ({gameState, resetComplete, record, restartGame, modalVisible, setModalVisible}) => {
 
   useEffect(() =>{
     if(gameState !== 'active'){
@@ -27,7 +27,7 @@ const MainPopup = ({gameState, resetComplete, record, updateGameState, modalVisi
             <p>{record && record.wins && record.totalGames && record.totalGames !== 0 ? `Win %: ${Math.round(record.wins / record.totalGames * 100)}%` : '`Win Percentage: -'}</p>
           </div>
           {gameState !== 'active' ? <p>{gameState === 'Won' ? "Congrats on the Win" : 'Sorry, try again'}</p> : ''}
-          <button className="play-again-btn" disabled={!resetComplete} onClick={() => updateGameState('active')}>Play Again</button>
+          <button className="play-again-btn" disabled={!resetComplete} onClick={() => restartGame('active')}>Play Again</button>
       </Dialog> 
   )
 }
