@@ -24,16 +24,16 @@
 
 @media screen and (max-width: 1024px){
   .gameboard{
-      height: 45vh;
+      height: 45dvh;
   }
 }
 
 @media screen and (max-width: 600px){
   .gameboard{
-    height: 55svh; 
+    height: 55dvh; 
   }
   .App{
-    height: 100svh;
+    height: 100dvh;
     justify-content: space-between;
   } 
 }

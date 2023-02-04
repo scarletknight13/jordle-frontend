@@ -7,11 +7,11 @@
 /* medium devices */
 @media screen and (max-width: 1024px){
     .GuessRow{
-        width: 40svw;
+        width: 40dvw;
     }
 }
 @media screen and (max-width: 600px){
     .GuessRow{
-        width: 75svw;
+        width: 75dvw;
     }
 }

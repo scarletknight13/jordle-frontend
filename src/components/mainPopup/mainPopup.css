@@ -20,10 +20,10 @@
 
 @media screen and (max-width: 600px){
     .MainPopup{
-        width: 85vw !important;
+        width: 85dvw !important;
     }
     .play-again-btn{
-        width: 35vw;
+        width: 35dvw;
         height: 7vh;
         color: black;
         font-size: medium;

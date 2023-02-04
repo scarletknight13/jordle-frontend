@@ -45,7 +45,7 @@
         width: 50%;
     }
     .Header{
-        height: 7vh;
+        height: 7dvh;
     }
 }
 @media screen and (max-width: 600px){
@@ -53,7 +53,7 @@
         width: 100%;
    }
    .Header{
-        height: 6vh;
+        height: 6dvh;
    }
    .title{
         font-size: larger;
