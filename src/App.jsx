@@ -10,7 +10,7 @@ import Header from './components/header/Header';
 import TutorialModal from './components/howToPlayPopup/TutorialModal';
 
 function App() {
-  const {guesses, currentGuess, handleKeyPicked, gameWord, gameState, errorMessages, updateGameState, turn, resetComplete, record} = useJordle();
+  const {guesses, currentGuess, handleKeyPicked, gameWord, gameState, errorMessages, restartGame, turn, resetComplete, record} = useJordle();
   console.log(guesses)
   const [modalVisible, setModalVisible] = useState(false);
   const [tutorialVisible, setTutorialVisible] = useState(false);
@@ -43,7 +43,7 @@ function App() {
         </div>
         <Keyboard handleKeyPicked={handleKeyPicked}/>
         <ToastContainer data-testid='toast-container'/>
-        <MainPopup record={record} modalVisible={modalVisible} setModalVisible={setModalVisible} resetComplete={resetComplete} gameState={gameState} updateGameState={updateGameState}/>
+        <MainPopup record={record} modalVisible={modalVisible} setModalVisible={setModalVisible} resetComplete={resetComplete} gameState={gameState} restartGame={restartGame}/>
         <TutorialModal tutorialVisible={tutorialVisible} setTutorialVisible={setTutorialVisible} />
     </div>
   );

@@ -28,6 +28,7 @@ const useJordle = () =>{
         getRecordFromLocalStorage();
     }, [])
 
+
     useEffect(() => {
         if(record !== undefined){
             console.log(record)
@@ -35,6 +36,7 @@ const useJordle = () =>{
         }
     }, [record])
 
+    
     useEffect(() => {
 
         if(gameState !== 'active'){
@@ -63,7 +65,7 @@ const useJordle = () =>{
     }, [gameState])
     
 
-    const updateGameState = (newGameState) => {
+    const restartGame = (newGameState) => {
         window.location.reload(false);
     }
 
@@ -76,7 +78,7 @@ const useJordle = () =>{
 
     const handleKeyPicked = ({key}) => {
 
-        if (gameWord){
+        if (gameWord && gameState === 'active'){
             console.log(currentGuess)
             //if key letter is picked add to currentGuess
             if( /^[A-Za-z]{1,1}$/.test(key) && currentGuess.length < 5){
@@ -188,6 +190,6 @@ const useJordle = () =>{
         setTurn(turn + 1);
     }
     
-    return {guesses, currentGuess, handleKeyPicked, gameWord, gameState, errorMessages, updateGameState, resetComplete, record}
+    return {guesses, currentGuess, handleKeyPicked, gameWord, gameState, errorMessages, restartGame, resetComplete, record}
 }
 export default useJordle;
