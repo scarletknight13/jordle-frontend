@@ -2,7 +2,7 @@ import './keyboard.css'
 import Key from '../key/Key'
 const Keyboard = ({word, handleKeyPicked}) => {
 
-    console.log(typeof setSeen);
+    // console.log(typeof setSeen);
     const keys = [];
     for(let i = 0; i < 26; ++i){
         keys.push(String.fromCharCode('A'.charCodeAt() + i));

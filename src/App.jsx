@@ -11,7 +11,7 @@ import TutorialModal from './components/howToPlayPopup/TutorialModal';
 
 function App() {
   const {guesses, currentGuess, handleKeyPicked, gameWord, gameState, errorMessages, restartGame, turn, resetComplete, record} = useJordle();
-  console.log(guesses)
+  // console.log(guesses)
   const [modalVisible, setModalVisible] = useState(false);
   const [tutorialVisible, setTutorialVisible] = useState(false);
   const toastOptions = {
@@ -39,7 +39,7 @@ function App() {
     <div className="App">
         <Header setModalVisible={setModalVisible} setTutorialVisible={setTutorialVisible}/>
         <div className="gameboard">
-          {guesses.map((g, idx) => <GuessRow guess={guesses[idx].word} classes={guesses[idx].states}/>) }
+          {guesses.map((g, idx) => <GuessRow key={`guess-row-${idx}`} guess={guesses[idx].word} classes={guesses[idx].states} guessNum={idx}/>) }
         </div>
         <Keyboard handleKeyPicked={handleKeyPicked}/>
         <ToastContainer data-testid='toast-container'/>

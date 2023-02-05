@@ -17,7 +17,7 @@ const useJordle = () =>{
     useEffect(() => {
         const getRecordFromLocalStorage = async () =>{
             const data = localStorage.getItem('jordleRecord');
-            console.log('this happened');
+            //console.log('this happened');
             if(!data){
                 setRecord({totalGames: 0, wins : 0});
             }
@@ -31,7 +31,7 @@ const useJordle = () =>{
 
     useEffect(() => {
         if(record !== undefined){
-            console.log(record)
+            //console.log(record)
             localStorage.setItem('jordleRecord', JSON.stringify(record));
         }
     }, [record])
@@ -41,23 +41,23 @@ const useJordle = () =>{
 
         if(gameState !== 'active'){
             if(gameState === 'Won'){
-                console.log('I won', record);
+                // console.log('I won', record);
                 setRecord({totalGames: record.totalGames + 1, wins : record.wins + 1})
             }
             else{
-                console.log('I lost');
+                // console.log('I lost');
                 setRecord({totalGames: record.totalGames + 1, wins : record.wins})
             }
         }
         const fecthWord = async () => {
-            console.log('here');
+            // console.log('here');
             try{
                 const data = await axios.get('https://jordle-api.onrender.com/getWord');
                 // console.log(data.data.word);
                 setGameWord(data.data.word.toUpperCase());
             }
             catch(e){
-                console.log(e);
+                // console.log(e);
             }
         }
         fecthWord();
@@ -79,7 +79,7 @@ const useJordle = () =>{
     const handleKeyPicked = ({key}) => {
 
         if (gameWord && gameState === 'active'){
-            console.log(currentGuess)
+            // console.log(currentGuess)
             //if key letter is picked add to currentGuess
             if( /^[A-Za-z]{1,1}$/.test(key) && currentGuess.length < 5){
                 key = key.toUpperCase()
@@ -95,7 +95,7 @@ const useJordle = () =>{
     
             // if enter is pressed add currentGuess to guesses
             if (key === 'Enter' && currentGuess.length === 5){
-                console.log(turn)
+                // console.log(turn)
                 if(turn < 6)
                     enterGuess();
             }
@@ -106,13 +106,13 @@ const useJordle = () =>{
         if(currentGuess === '' && gameState !== 'active'){
             if(turn === 0 && guesses[0].word === ''){
                 setResetComplete(true);
-                console.log('happens here')
+                // console.log('happens here')
             }
         }
         if(turn < 6){
             const newGuesses = [...guesses];
             newGuesses[turn] = {...newGuesses[turn], word: currentGuess};
-            console.log(newGuesses);
+            // console.log(newGuesses);
             setGuesses(newGuesses);
         }
     }, [currentGuess])
@@ -121,11 +121,11 @@ const useJordle = () =>{
         if(turn === 0){
             if(currentGuess === '' && guesses[0].word === ''){
                 setResetComplete(true);
-                console.log('happens here')
+                // console.log('happens here')
             }
         }
         if(turn === 6 && gameState === 'active'){
-            setErrorMessages('You lose, try again');
+            // setErrorMessages('You lose, try again');
             setGameState('Lost');
             handleGameOver();
         }
@@ -136,14 +136,14 @@ const useJordle = () =>{
         if(guesses[0].word === ''){
             if(currentGuess === '' && turn === 0){
                 setResetComplete(true);
-                console.log('happens here');
+                // console.log('happens here');
             }
         }
     }, [guesses])
     const validateWord = async () => {
         try{
             const data = await axios.get(`https://jordle-api.onrender.com/isAWord/${currentGuess}`);
-            console.log(data);
+            // console.log(data);
             if(data.data.result === false){
                 setErrorMessages(data.data.message);
             }
@@ -151,7 +151,7 @@ const useJordle = () =>{
         }
         catch(e){
             setErrorMessages(e.message);
-            console.log(e);
+            // console.log(e);
         }
         return false;
     }
@@ -164,7 +164,7 @@ const useJordle = () =>{
         const newGuesses = [...guesses];
         const newGuessIdx = {word: guesses[turn].word, states: []}
         const newStates = [];
-        console.log(gameWord, newGuessIdx.word)
+        // console.log(gameWord, newGuessIdx.word)
         for (let i = 0; i < newGuessIdx.word.length; i++) {
 
             if(gameWord[i] === newGuessIdx.word[i]) {
@@ -180,7 +180,7 @@ const useJordle = () =>{
 
         newGuessIdx['states'] = newStates;
         newGuesses[turn] = newGuessIdx;
-        console.log(newGuesses);
+        // console.log(newGuesses);
         setGuesses(newGuesses);
         setCurrentGuess('')
         if (newStates.find(state => state !== 'right') === undefined){
